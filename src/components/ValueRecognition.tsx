@@ -72,12 +72,12 @@ const ValueRecognition: React.FC = () => {
 
     const mockValueLeaders: ValueLeader[] = [
       {
-        value: 'Entrepreneurial Mindset',
+        value: 'Humor',
         employee: { id: '1', name: 'Alex Rivera', photo: 'https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?w=150&h=150&fit=crop&crop=face', recognitionCount: 15, level: 'Oak' },
         count: 15
       },
       {
-        value: 'Excellence',
+        value: 'Entrepreneurial Mindset',
         employee: { id: '2', name: 'Priya Patel', photo: 'https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?w=150&h=150&fit=crop&crop=face', recognitionCount: 18, level: 'Oak' },
         count: 18
       },
@@ -85,6 +85,26 @@ const ValueRecognition: React.FC = () => {
         value: 'Can-Do Attitude',
         employee: { id: '3', name: 'Marcus Johnson', photo: 'https://images.pexels.com/photos/1674666/pexels-photo-1674666.jpeg?w=150&h=150&fit=crop&crop=face', recognitionCount: 12, level: 'Sapling' },
         count: 12
+      },
+      {
+        value: 'Embrace Vulnerabilities',
+        employee: { id: '4', name: 'Sofia Chen', photo: 'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?w=150&h=150&fit=crop&crop=face', recognitionCount: 14, level: 'Oak' },
+        count: 14
+      },
+      {
+        value: 'Trusted Advisor',
+        employee: { id: '5', name: 'David Kim', photo: 'https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?w=150&h=150&fit=crop&crop=face', recognitionCount: 16, level: 'Oak' },
+        count: 16
+      },
+      {
+        value: 'Candor',
+        employee: { id: '6', name: 'Emma Wilson', photo: 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?w=150&h=150&fit=crop&crop=face', recognitionCount: 11, level: 'Sapling' },
+        count: 11
+      },
+      {
+        value: 'Excellence',
+        employee: { id: '7', name: 'Ryan Torres', photo: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?w=150&h=150&fit=crop&crop=face', recognitionCount: 13, level: 'Sapling' },
+        count: 13
       }
     ];
 

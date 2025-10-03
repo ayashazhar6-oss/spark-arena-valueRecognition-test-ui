@@ -179,40 +179,18 @@ const ValueRecognition: React.FC = () => {
           {/* Recognitions List */}
           <div className="max-w-6xl mx-auto">
             <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg overflow-hidden">
-              <div className="overflow-x-auto">
-                <table className="w-full">
-                  <thead className="bg-gray-50">
-                    <tr>
-                      <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">Appreciator</th>
-                      <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">Recipient</th>
-                      <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">Message</th>
-                      <th className="px-6 py-4 text-left text-sm font-semibold text-gray-700">Time</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-gray-200">
-                    {recognitions.map((recognition) => (
-                      <tr key={recognition.id} className="hover:bg-gray-50 transition-colors">
-                        <td className="px-6 py-4">
-                          <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center">
-                              <Heart className="text-white" size={14} />
-                            </div>
-                            <span className="text-sm font-medium text-gray-900">{recognition.appreciator}</span>
-                          </div>
-                        </td>
-                        <td className="px-6 py-4">
-                          <span className="text-sm font-medium text-gray-900">{recognition.recipient}</span>
-                        </td>
-                        <td className="px-6 py-4">
-                          <p className="text-sm text-gray-700 leading-relaxed max-w-md">{recognition.message}</p>
-                        </td>
-                        <td className="px-6 py-4">
-                          <span className="text-sm text-gray-500">{formatTimeAgo(recognition.timestamp)}</span>
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+              <div className="space-y-4">
+                {recognitions.map((recognition) => (
+                  <div key={recognition.id} className="border-b border-gray-200 pb-4 last:border-b-0 hover:bg-gray-50 p-4 rounded-lg transition-colors">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="font-semibold text-gray-800">{recognition.appreciator}</span>
+                      <span className="text-gray-400">→</span>
+                      <span className="font-semibold text-gray-800">{recognition.recipient}</span>
+                      <span className="text-sm text-gray-500 ml-auto">{formatTimeAgo(recognition.timestamp)}</span>
+                    </div>
+                    <p className="text-gray-700 leading-relaxed pl-0">{recognition.message}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
